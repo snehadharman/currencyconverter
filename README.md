@@ -1,39 +1,63 @@
-# currencyconverter
-This is a simple program that lets you convert money from one currency to another. It uses an online service called the Frankfurter API to get the latest exchange rates. The program can also show you conversion rates for the last 5 days and saves your past conversions in a small local database.
+# Currency Converter
 
-#What You Need to Run It
-Python 3 (make sure you have it installed)
-Internet connection (for fetching exchange rates)
+This is a simple Python program that allows you to convert currency between various international currencies using real-time exchange rates from the [Frankfurter API]. The program also shows the conversion rates for the past 5 days and saves all conversions in a local SQLite database for future reference.
 
-#Download the project by cloning the repository:
+## Features
 
-#Install the required packages: You’ll need the requests package. Run this in your terminal:
-pip install requests
+- **Real-time Currency Conversion**: Get the latest exchange rates for currency conversion between different countries.
+- **Past 5-Day Exchange Rates**: See historical exchange rates for the last 5 days.
+- **Local Database Storage**: All conversions are stored in a local SQLite database, enabling you to view your past conversion history.
+- **Terminal-Based**: A simple terminal-based interface, ideal for quick currency conversions.
+  
+### Requirements
 
-#Run the program: In your terminal, type:
+To run this project, you will need:
 
-python currency_converter.py
+- **Python 3.11.6**: Make sure you have Python installed on your machine. 
+- **Internet Connection**: Required to fetch real-time exchange rates from the Frankfurter API.
+- **Required Packages**: You need to install the `requests` package for making HTTP requests.
 
-Follow the instructions:
+# Installation
 
-You can choose to either convert currency or view your conversion history.
-For converting, enter the currencies and amount when prompted.
-How It Works
+## Step 1: Clone the Repository
+
+To download the project, open a terminal and run the following command to clone the repository:
+
+**Clone the repository:**
+  
+   git clone <repository-url>
+
+**Install required packages:** 
+  In your terminal, navigate to the project directory and run the following command to install the necessary Python packages:
+
+  pip install requests
+
+### How to Run
+In your terminal, navigate to the project folder.
+Run the program using the following command:
+
+  python currency_converter.py
+
+# Example Conversion Flow
+Currency Conversion:
+
 The program will ask you to enter:
-The currency you’re converting from (e.g., USD for US Dollars).
-The currency you’re converting to (e.g., EUR for Euros).
+The currency you want to convert from (e.g., USD).
+The currency you want to convert to (e.g., EUR).
 The amount you want to convert.
-The program will show you the conversion rates for the last 5 days.
+It will fetch the latest exchange rate and show the converted amount.
+Additionally, the program will display conversion rates for the last 5 days.
 
-It will also save the conversions so you can view them later.
+View Conversion History:
 
-How to View Conversion History
-If you select the "View History" choice, you can see all your past conversions, which are stored in a local database.
+Choose this option to view a list of all your previous conversions. These are saved in a local SQLite database.
 
-This program is designed to be run in the terminal. 
-It uses the Frankfurter API, but you don’t need an API key—just run the program.
+## How It Works
+Frankfurter API:  This API provides real-time and historical exchange rates for currency conversion. No API key is needed to use it.
+SQLite Database: The program stores each conversion, allowing you to view your past conversions in future runs.
 
-References
+### References
 Frankfurter API
 Python SQLite Documentation
+Requests Library
 
